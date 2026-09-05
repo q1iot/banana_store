@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بنانا ستور | Banana Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">
+      <span>🍌</span> بنانا ستور
+    </div>
+    <nav class="nav-links" id="categories-nav">
+    </nav>
+    <div class="cart-btn-container" onclick="toggleCart()">
+      <i class="fa-solid fa-cart-shopping"></i>
+      <span id="cart-count">0</span>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>مرحباً بكم في <span class="highlight">بنانا ستور</span></h1>
+      <p>تسوق أفضل المنتجات مع خدمة الدفع عند الاستلام والتوصيل السريع!</p>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">أحدث المنتجات</h2>
+    <div class="products-grid" id="products-container">
+      <p class="empty-msg">جاري تحميل المنتجات...</p>
+    </div>
+  </main>
+
+  <div class="cart-modal" id="cart-modal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h3>سلة التسوق</h3>
+        <span class="close-btn" onclick="toggleCart()">&times;</span>
+      </div>
+      <div class="cart-items" id="cart-items">
+      </div>
+      <div class="cart-footer">
+        <p>المجموع: <span id="cart-total">0</span> د.ع</p>
+        <button class="checkout-btn" onclick="showCheckoutForm()">إتمام الطلب (الدفع عند الاستلام)</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-content">
+      <span class="close-btn" onclick="hideCheckoutForm()">&times;</span>
+      <h3>معلومات الطلب (الدفع عند الاستلام)</h3>
+      <form id="checkout-form">
+        <input type="text" id="cust-name" placeholder="الاسم الكامل" required>
+        <input type="tel" id="cust-phone" placeholder="رقم الهاتف" required>
+        <input type="text" id="cust-address" placeholder="العنوان التفصيلي (المحافظة / المنطقة)" required>
+        <textarea id="cust-notes" placeholder="ملاحظات إضافية للطلب (إختياري)"></textarea>
+        <button type="submit" class="confirm-order-btn">تأكيد الطلب الآن</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <h3>بنانا ستور | banana store</h3>
+      <p>تواصل معنا عبر منصاتنا الرسمية:</p>
+      <div class="social-links">
+        <a href="https://instagram.com/banana_store964" target="_blank"><i class="fa-brands fa-instagram"></i> @banana_store964</a>
+        <a href="https://tiktok.com/@banana_store964" target="_blank"><i class="fa-brands fa-tiktok"></i> @banana_store964</a>
+        <a href="mailto:bananastore964@gmail.com"><i class="fa-solid fa-envelope"></i> bananastore964@gmail.com</a>
+      </div>
+      <p class="rights">جميع الحقوق محفوظة © بنانا ستور 2026</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
